@@ -16,7 +16,7 @@ $threeHours = strtotime("-3 hours", $lsi);
 
 foreach($tomatoStatus as $tomato) {
     $lastImport = strtotime($tomato['last_successful_import']);
-    
+
     if ($lastImport < $threeHours) {
         $attachments = array([
             "fallback" => "Tomato Failed Import.",
